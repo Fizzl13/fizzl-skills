@@ -1,30 +1,38 @@
 # Fizzl agent skills
 
-Agent skills for AI agents that pay. Each skill is a `SKILL.md` that tells an agent when and how to use a live service, in the [Agent Skills](https://agentskills.io) format that Claude Code, Claude, Cursor and other agents read.
+Every [Agent Skill](https://agentskills.io) for the Fizzl services: `SKILL.md` files that tell an AI agent (Claude Code, Claude, Codex, Cursor and others that read skills) when and how to use a live service for agents that pay.
 
-| Skill | Use it to | Service |
+| Skill | Use it to | Where it lives |
 |---|---|---|
-| [`x402-preflight`](skills/x402-preflight/SKILL.md) | Check an x402 or MPP endpoint before paying it: go, caution or no_go | [x402 Doctor](https://x402-doctor.fizzl.eu) |
-| [`x402-seller-fix`](skills/x402-seller-fix/SKILL.md) | Find out why agents can't pay your x402 endpoint, and get the fix as code | [x402 Doctor](https://x402-doctor.fizzl.eu) |
-| [`presign-check`](skills/presign-check/SKILL.md) | Check a transaction, approval, signature or token before signing or buying: green, orange or red | [presign-guard](https://presign-guard.fizzl.eu) |
-| [`wallet-sanctions-screen`](skills/wallet-sanctions-screen/SKILL.md) | Screen a wallet address against the OFAC SDN list before paying it or accepting money from it | [presign-guard](https://presign-guard.fizzl.eu) |
-| [`agent-wallet-limits`](skills/agent-wallet-limits/SKILL.md) | Give an agent a wallet with spending limits and phone approval | [Fizzl Agent Wallet](https://wallet.fizzl.eu) |
-| [`crypto-trend-signal`](skills/crypto-trend-signal/SKILL.md) | Ichimoku, confluence, levels, a 148-coin scan and setups for a coin | [Ichimoku Signal](https://ichimoku-signal.fizzl.eu) |
+| [`x402-preflight`](https://github.com/Fizzl13/x402-doctor/tree/master/skills/x402-preflight) | Check an x402 or MPP endpoint before paying it: go, caution or no_go | [x402 Doctor](https://x402-doctor.fizzl.eu) repo |
+| [`x402-seller-check`](https://github.com/Fizzl13/x402-doctor/tree/master/skills/x402-seller-check) | Check your own paid endpoint until it passes, with the fix as code | [x402 Doctor](https://x402-doctor.fizzl.eu) repo |
+| [`presign-check`](https://github.com/Fizzl13/presign-guard/tree/main/skills/presign-check) | Check a transaction, approval, signature or token before signing or buying, and screen an address against the OFAC SDN list before sending | [presign-guard](https://presign-guard.fizzl.eu) repo |
+| [`agent-wallet-limits`](skills/agent-wallet-limits/SKILL.md) | Give an agent a wallet with spending limits and phone approval | this repo, for the [Fizzl Agent Wallet](https://wallet.fizzl.eu) |
+| [`crypto-trend-signal`](skills/crypto-trend-signal/SKILL.md) | Ichimoku, confluence, levels, a 148-coin scan and setups for a coin | this repo, for [Ichimoku Signal](https://ichimoku-signal.fizzl.eu) |
 
 The services are paid per call over [x402](https://x402.org) or MPP (USDC on Base, Solana, Algorand or Stellar, RLUSD on the XRP Ledger), with no account or API key. Each has free calls to try first.
 
 ## Install
 
-**Claude Code**, as a plugin:
+**Claude Code:** all five come from one plugin marketplace, together with the services' MCP servers:
 
 ```
-/plugin install fizzl-agent-payments --marketplace Fizzl13/fizzl-skills
-/plugin install fizzl-crypto-signals --marketplace Fizzl13/fizzl-skills
+/plugin marketplace add Fizzl13/x402-doctor
+/plugin install x402-doctor@fizzl
+/plugin install presign-guard@fizzl
+/plugin install fizzl-agent-wallet@fizzl
+/plugin install ichimoku-signal@fizzl
 ```
 
-On older Claude Code versions: `/plugin marketplace add Fizzl13/fizzl-skills`, then `/plugin install fizzl-agent-payments@fizzl`.
+**Any agent that reads skills:**
 
-**Any agent that reads skills:** copy a folder from `skills/` into your agent's skills directory, for example `~/.claude/skills/` or `.claude/skills/` in a project.
+```sh
+npx skills add Fizzl13/x402-doctor
+npx skills add Fizzl13/presign-guard
+npx skills add Fizzl13/fizzl-skills
+```
+
+Or copy a skill folder into your agent's skills directory, for example `~/.claude/skills/`.
 
 **MCP:** the services are also remote MCP servers, no install needed:
 
