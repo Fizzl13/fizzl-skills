@@ -1,0 +1,35 @@
+{
+  "name": "fizzl",
+  "owner": {
+    "name": "Fizzl",
+    "email": "frits@fizzl.eu"
+  },
+  "metadata": {
+    "description": "Agent skills for safe payments by AI agents: check an x402 endpoint before paying, fix a broken 402, check a transaction before signing, screen a wallet for sanctions, give an agent a wallet with limits, and crypto trend signals.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "fizzl-agent-payments",
+      "description": "Skills for AI agents that pay: x402 preflight and seller fixes (x402 Doctor), pre-sign checks and OFAC wallet screening (presign-guard), and a wallet with spending limits (Fizzl Agent Wallet).",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/x402-preflight",
+        "./skills/x402-seller-fix",
+        "./skills/presign-check",
+        "./skills/wallet-sanctions-screen",
+        "./skills/agent-wallet-limits"
+      ]
+    },
+    {
+      "name": "fizzl-crypto-signals",
+      "description": "Crypto trend signals for trading and research agents (Ichimoku Signal).",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/crypto-trend-signal"
+      ]
+    }
+  ]
+}
