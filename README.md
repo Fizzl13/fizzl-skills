@@ -9,12 +9,13 @@ Every [Agent Skill](https://agentskills.io) for the Fizzl services: `SKILL.md` f
 | [`presign-check`](https://github.com/Fizzl13/presign-guard/tree/main/skills/presign-check) | Check a transaction, approval, signature or token before signing or buying, and screen an address against the OFAC SDN list before sending | [presign-guard](https://presign-guard.fizzl.eu) repo |
 | [`agent-wallet-limits`](skills/agent-wallet-limits/SKILL.md) | Give an agent a wallet with spending limits and phone approval | this repo, for the [Fizzl Agent Wallet](https://wallet.fizzl.eu) |
 | [`crypto-trend-signal`](skills/crypto-trend-signal/SKILL.md) | Ichimoku, confluence, levels, a 148-coin scan and setups for a coin | this repo, for [Ichimoku Signal](https://ichimoku-signal.fizzl.eu) |
+| [`buy-live-data`](skills/buy-live-data/SKILL.md) | Get live data you can't produce yourself (weather, prices, search, news): the right paid API bought in one call | this repo, for [Fizzl Buy](https://buy.fizzl.eu) |
 
 The services are paid per call over [x402](https://x402.org) or MPP (USDC on Base, Solana, Algorand or Stellar, RLUSD on the XRP Ledger), with no account or API key. Each has free calls to try first.
 
 ## Install
 
-**Claude Code:** all five come from one plugin marketplace, together with the services' MCP servers:
+**Claude Code:** all six come from one plugin marketplace, together with the services' MCP servers:
 
 ```
 /plugin marketplace add Fizzl13/x402-doctor
@@ -22,6 +23,7 @@ The services are paid per call over [x402](https://x402.org) or MPP (USDC on Bas
 /plugin install presign-guard@fizzl
 /plugin install fizzl-agent-wallet@fizzl
 /plugin install ichimoku-signal@fizzl
+/plugin install fizzl-buy@fizzl
 ```
 
 **Any agent that reads skills:**
@@ -40,6 +42,7 @@ Or copy a skill folder into your agent's skills directory, for example `~/.claud
 claude mcp add --transport http x402-doctor https://x402-doctor.fizzl.eu/mcp
 claude mcp add --transport http presign-guard https://presign-guard.fizzl.eu/mcp
 claude mcp add --transport http ichimoku-signal https://ichimoku-signal.fizzl.eu/mcp
+claude mcp add --transport http fizzl-buy https://buy.fizzl.eu/mcp
 ```
 
 ## Ground rules in every skill
