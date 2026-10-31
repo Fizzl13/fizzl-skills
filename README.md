@@ -54,7 +54,7 @@ claude mcp add --transport http fizzl-buy https://buy.fizzl.eu/mcp
 ## More
 
 - [fizzl.eu](https://fizzl.eu) · [llms.txt](https://fizzl.eu/llms.txt)
-- What x402 Doctor's daily scan of 50,000 paid endpoints shows: [x402 health report, October 2026](https://fizzl.eu/research/x402-health-october-2026/)
+- What x402 Doctor's daily scan of 42,000 paid endpoints shows: [x402 health report, October 2026](https://fizzl.eu/research/x402-health-october-2026/)
 - Source of the services: [x402-doctor](https://github.com/Fizzl13/x402-doctor), [presign-guard](https://github.com/Fizzl13/presign-guard), [x402-examples](https://github.com/Fizzl13/x402-examples)
 
 MIT licensed. Made by [Frits Zwager](https://cv.fizzl.eu) (Fizzl, Amsterdam).
