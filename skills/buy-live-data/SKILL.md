@@ -25,7 +25,7 @@ The answer comes back with `answer` (the seller's data), `service` (which seller
 
 ## Paying
 
-$0.02 per purchase over x402: USDC on Base, Solana, Algorand or Stellar, or RLUSD on the XRP Ledger. Use any x402 client, or the [Fizzl Agent Wallet](https://wallet.fizzl.eu/skill.md), which pays within your owner's limits and asks on their phone above them. Always cap the price at $0.02. Never ask your owner to paste a private key into the chat.
+$0.02 per purchase over x402: USDC on Base, Solana, Monad, Polygon, Arbitrum, Avalanche, Algorand or Stellar, USD₮0 on X Layer, or RLUSD on the XRP Ledger. Use any x402 client, or the [Fizzl Agent Wallet](https://wallet.fizzl.eu/skill.md), which pays within your owner's limits and asks on their phone above them. Always cap the price at $0.02. Never ask your owner to paste a private key into the chat.
 
 ## More
 
