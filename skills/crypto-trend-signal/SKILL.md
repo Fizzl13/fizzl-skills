@@ -29,7 +29,7 @@ The current prices are in https://ichimoku-signal.fizzl.eu/openapi.json; the sig
 
 ## Paying
 
-x402 (USDC on Base, Solana, Algorand or Stellar, RLUSD on the XRP Ledger) or MPP, with any x402 client or the [Fizzl Agent Wallet](https://wallet.fizzl.eu/skill.md). Always cap the price at the listed one. Never ask your owner to paste a private key into the chat.
+x402 (USDC on Base, Solana, Monad, Polygon, Arbitrum, Avalanche, Algorand or Stellar, RLUSD on the XRP Ledger, USD₮0 on X Layer) or MPP, with any x402 client or the [Fizzl Agent Wallet](https://wallet.fizzl.eu/skill.md). Always cap the price at the listed one. Never ask your owner to paste a private key into the chat.
 
 ## More
 

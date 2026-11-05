@@ -11,7 +11,7 @@ Every [Agent Skill](https://agentskills.io) for the Fizzl services: `SKILL.md` f
 | [`crypto-trend-signal`](skills/crypto-trend-signal/SKILL.md) | Ichimoku, confluence, levels, a 148-coin scan and setups for a coin | this repo, for [Ichimoku Signal](https://ichimoku-signal.fizzl.eu) |
 | [`buy-live-data`](skills/buy-live-data/SKILL.md) | Get live data you can't produce yourself (weather, prices, search, news): the right paid API bought in one call | this repo, for [Fizzl Buy](https://buy.fizzl.eu) |
 
-The services are paid per call over [x402](https://x402.org) or MPP (USDC on Base, Solana, Algorand or Stellar, RLUSD on the XRP Ledger), with no account or API key. Each has free calls to try first.
+The services are paid per call over [x402](https://x402.org) or MPP (USDC on Base, Solana, Monad, Polygon, Arbitrum, Avalanche, Algorand or Stellar, RLUSD on the XRP Ledger, USD₮0 on X Layer), with no account or API key. Each has free calls to try first.
 
 ## Install
 
