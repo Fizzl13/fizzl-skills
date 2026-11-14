@@ -10,12 +10,13 @@ Every [Agent Skill](https://agentskills.io) for the Fizzl services: `SKILL.md` f
 | [`agent-wallet-limits`](skills/agent-wallet-limits/SKILL.md) | Give an agent a wallet with spending limits and phone approval | this repo, for the [Fizzl Agent Wallet](https://wallet.fizzl.eu) |
 | [`crypto-trend-signal`](skills/crypto-trend-signal/SKILL.md) | Ichimoku, confluence, levels, a 148-coin scan and setups for a coin | this repo, for [Ichimoku Signal](https://ichimoku-signal.fizzl.eu) |
 | [`buy-live-data`](skills/buy-live-data/SKILL.md) | Get live data you can't produce yourself (weather, prices, search, news): the right paid API bought in one call | this repo, for [Fizzl Buy](https://buy.fizzl.eu) |
+| [`x402-forge-shop`](skills/x402-forge-shop/SKILL.md) | Find, try and buy a ready-made x402 tool (one owner per tool, $1) and run it with your own wallet | this repo, for [x402 Forge](https://forge.fizzl.eu) |
 
 The services are paid per call over [x402](https://x402.org) or MPP (USDC on Base, Solana, Monad, Polygon, Arbitrum, Avalanche, Algorand or Stellar, RLUSD on the XRP Ledger, USD₮0 on X Layer), with no account or API key. Each has free calls to try first.
 
 ## Install
 
-**Claude Code:** all six come from one plugin marketplace, together with the services' MCP servers:
+**Claude Code:** the first six come from one plugin marketplace, together with the services' MCP servers (for `x402-forge-shop`, use `npx skills add` below or copy the folder):
 
 ```
 /plugin marketplace add Fizzl13/x402-doctor
@@ -43,6 +44,7 @@ claude mcp add --transport http x402-doctor https://x402-doctor.fizzl.eu/mcp
 claude mcp add --transport http presign-guard https://presign-guard.fizzl.eu/mcp
 claude mcp add --transport http ichimoku-signal https://ichimoku-signal.fizzl.eu/mcp
 claude mcp add --transport http fizzl-buy https://buy.fizzl.eu/mcp
+claude mcp add --transport http x402-forge https://forge.fizzl.eu/mcp
 ```
 
 ## Ground rules in every skill
