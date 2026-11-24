@@ -16,15 +16,13 @@ The services are paid per call over [x402](https://x402.org) or MPP (USDC on Bas
 
 ## Install
 
-**Claude Code:** the first six come from one plugin marketplace, together with the services' MCP servers (for `x402-forge-shop`, use `npx skills add` below or copy the folder):
+**Claude Code and claude.ai:** three plugins from one marketplace, together with the services' MCP servers: `x402-doctor` and `presign-guard`, and `fizzl`, this repository (the Agent Wallet, Ichimoku Signal, Fizzl Buy and x402 Forge skills). On claude.ai: Plugins → Add → Add marketplace → `Fizzl13/x402-doctor`.
 
 ```
 /plugin marketplace add Fizzl13/x402-doctor
 /plugin install x402-doctor@fizzl
 /plugin install presign-guard@fizzl
-/plugin install fizzl-agent-wallet@fizzl
-/plugin install ichimoku-signal@fizzl
-/plugin install fizzl-buy@fizzl
+/plugin install fizzl@fizzl
 ```
 
 **Any agent that reads skills:**

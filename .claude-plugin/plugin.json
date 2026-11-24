@@ -1,0 +1,17 @@
+{
+  "name": "fizzl",
+  "displayName": "Fizzl",
+  "version": "1.0.0",
+  "description": "Fizzl's services for agents that pay: the Agent Wallet (spending limits, approval on your phone), Ichimoku Signal (crypto trend signals and a 148-coin scan), Fizzl Buy (live data bought in one call) and x402 Forge (ready-made x402 tools). Four skills plus the Ichimoku Signal and Fizzl Buy MCP servers.",
+  "author": { "name": "Fizzl", "url": "https://fizzl.eu" },
+  "homepage": "https://fizzl.eu",
+  "repository": "https://github.com/Fizzl13/fizzl-skills",
+  "license": "MIT",
+  "privacyPolicyUrl": "https://fizzl.eu/privacy/",
+  "icon": ".claude-plugin/icon.png",
+  "keywords": ["x402", "agents", "wallet", "spending-limits", "crypto", "signals", "data"],
+  "mcpServers": {
+    "ichimoku-signal": { "type": "http", "url": "https://ichimoku-signal.fizzl.eu/mcp" },
+    "fizzl-buy": { "type": "http", "url": "https://buy.fizzl.eu/mcp" }
+  }
+}
